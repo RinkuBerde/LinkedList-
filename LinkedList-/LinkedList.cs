@@ -134,6 +134,22 @@ namespace LinkedList_
             //Remove the reference of the last but one node's next to make it the new last node
             newNode.next = null;
         }
+        ////For searching a node
+        internal void Search(int value)
+        {
+            Node temp = this.head;
+            while (temp != null)
+            {
+                if (temp.data == value)
+                {
+                    Console.WriteLine("Given value: " + value + " is present in Linked list");
+                    return;
+                }
+                temp = temp.next;
+            }
+            if (temp == null)
+                Console.WriteLine("Given value: " + value + " is not present in Linked list");
+        }
         //For displaying all elements in Linked List
         internal void Display()
         {
