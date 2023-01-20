@@ -102,6 +102,18 @@ namespace LinkedList_
                 }
             }
         }
+        //For deleting the first node
+        internal void Pop()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("Linked List is empty");
+                return;
+            }
+            //Moving head to next position
+            Console.WriteLine("The first node having data " + head.data + " is deleted from the list");
+            head = head.next;
+        }
         //For displaying all elements in Linked List
         internal void Display()
         {
