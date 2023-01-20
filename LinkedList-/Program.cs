@@ -15,6 +15,7 @@
             Console.WriteLine("7. Search Linked List to find node with value 30");
             Console.WriteLine("8. Insert 40 after 30 in list of sequence 56->30->70");
             Console.WriteLine("9. Delete 40 from the list and show size of the list");
+            Console.WriteLine("10. Ordered linked list in ascending order ");
             Console.WriteLine("------------------------------------------");
             Console.Write("Enter the option : ");
             int num = Convert.ToInt32(Console.ReadLine());
@@ -91,6 +92,14 @@
                     Console.Write("Final sequence of ");
                     linkedList.Display();
                     linkedList.Size();
+                    break;
+                case 10:
+                    linkedList.OrderedList(56);
+                    linkedList.OrderedList(30);
+                    linkedList.OrderedList(40);
+                    linkedList.OrderedList(70);
+                    Console.Write("Ordered sequence of ");
+                    linkedList.Display();
                     break;
                 default:
                     Console.WriteLine("Please enter correct choice");
