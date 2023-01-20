@@ -9,6 +9,7 @@
             Console.WriteLine("1.Create simple Linked List of 56, 30 and 70 ");
             Console.WriteLine("2. Create Linked List by Adding 30 and 56 to 70");
             Console.WriteLine("3. Create Linked List by Appending 30 and 56 to 70");
+            Console.WriteLine("4. Insert 30 between 56 and 70");
             Console.WriteLine("------------------------------------------");
             Console.Write("Enter the option : ");
             int num = Convert.ToInt32(Console.ReadLine());
@@ -31,6 +32,14 @@
                     linkedList.Append(56);
                     linkedList.Append(30);
                     linkedList.Append(70);
+                    linkedList.Display();
+                    break;
+                case 4:
+                    linkedList.Append(56);
+                    linkedList.Append(70);
+                    linkedList.Display();
+                    linkedList.AddAtPosition(2, 30);
+                    Console.Write("After insertion ");
                     linkedList.Display();
                     break;
                 default:
