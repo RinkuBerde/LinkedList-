@@ -114,6 +114,26 @@ namespace LinkedList_
             Console.WriteLine("The first node having data " + head.data + " is deleted from the list");
             head = head.next;
         }
+        internal void PopLast()
+        {
+            Node newNode = head;
+            if (head == null)
+            {
+                Console.WriteLine("Linked List is empty");
+                return;
+            }
+            if (head.next == null)
+            {
+                this.head = null;
+            }
+            while (newNode.next.next != null)
+            {
+                //Move newNode to the next node
+                newNode = newNode.next;
+            }
+            //Remove the reference of the last but one node's next to make it the new last node
+            newNode.next = null;
+        }
         //For displaying all elements in Linked List
         internal void Display()
         {
