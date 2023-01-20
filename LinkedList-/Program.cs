@@ -13,6 +13,7 @@
             Console.WriteLine("5. Delete first element in list of sequence 56->30->70");
             Console.WriteLine("6. Delete last element in list of sequence 56->30->70");
             Console.WriteLine("7. Search Linked List to find node with value 30");
+            Console.WriteLine("8. Insert 40 after 30 in list of sequence 56->30->70");
             Console.WriteLine("------------------------------------------");
             Console.Write("Enter the option : ");
             int num = Convert.ToInt32(Console.ReadLine());
@@ -69,6 +70,15 @@
                     linkedList.Append(70);
                     linkedList.Display();
                     linkedList.Search(30);
+                    break;
+                case 8:
+                    linkedList.Append(56);
+                    linkedList.Append(30);
+                    linkedList.Append(70);
+                    linkedList.Display();
+                    linkedList.AddAfter(30, 40);
+                    Console.Write("After insertion ");
+                    linkedList.Display();
                     break;
                 default:
                     Console.WriteLine("Please enter correct choice");
