@@ -38,6 +38,27 @@ namespace LinkedList_
             }
             Console.WriteLine(node.data + " appended to the Linked List");
         }
+        //For adding the node at the first position
+        internal void Add(int data)
+        {
+            Node newNode = new Node(data);
+
+            //Checking if head is pointing to null value or not
+            if (this.head == null)
+            {
+                //If head is pointing to null then add the entered element as first element
+                this.head = newNode;
+            }
+            else
+            {
+                //Assigning newNode's next to the head (i.e. at first position)
+                newNode.next = this.head;
+
+                //Now head is pointing to newNode
+                head = newNode;
+            }
+            Console.WriteLine(newNode.data + " added to the Linked List");
+        }
         //For displaying all elements in Linked List
         internal void Display()
         {

@@ -11,15 +11,22 @@
             Console.WriteLine("------------------------------------------");
             Console.Write("Enter the option : ");
             int num = Convert.ToInt32(Console.ReadLine());
-            LinkedList linkedListStack = new LinkedList();
+            LinkedList linkedList = new LinkedList();
             switch (num)
             {
                 case 1:
-                    linkedListStack.Append(56);
-                    linkedListStack.Append(30);
-                    linkedListStack.Append(70);
-                    linkedListStack.Display();
+                    linkedList.Append(56);
+                    linkedList.Append(30);
+                    linkedList.Append(70);
+                    linkedList.Display();
                     break;
+                case 2:
+                    linkedList.Add(70);
+                    linkedList.Add(30);
+                    linkedList.Add(56);
+                    linkedList.Display();
+                    break;
+
                 default:
                     Console.WriteLine("Please enter correct choice");
                     break;
